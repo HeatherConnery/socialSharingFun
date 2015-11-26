@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="g63-yh-Ga7">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SocialSharingFun" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riK-Cy-5Az">
+                                <rect key="frame" x="259" y="120" width="82" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Facey-Book"/>
+                                <connections>
+                                    <action selector="socialShareSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hrE-FY-il6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8lg-Pg-qSg">
+                                <rect key="frame" x="253" y="158" width="94" height="30"/>
+                                <animations/>
+                                <state key="normal" title="GenericShare"/>
+                                <connections>
+                                    <action selector="socialShareSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GKR-x0-6Sk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5T6-eN-XrU">
+                                <rect key="frame" x="253" y="82" width="94" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Tweety-tweet"/>
+                                <connections>
+                                    <action selector="socialShareSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ci3-AW-etT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5T6-eN-XrU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5iy-Ag-Wdc"/>
+                            <constraint firstItem="5T6-eN-XrU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="18" id="Bgc-dq-la4"/>
+                            <constraint firstItem="riK-Cy-5Az" firstAttribute="top" secondItem="5T6-eN-XrU" secondAttribute="bottom" constant="8" id="SJe-41-t6l"/>
+                            <constraint firstItem="riK-Cy-5Az" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bPb-vN-a13"/>
+                            <constraint firstItem="8lg-Pg-qSg" firstAttribute="top" secondItem="riK-Cy-5Az" secondAttribute="bottom" constant="8" id="q4k-mO-z6Z"/>
+                            <constraint firstItem="8lg-Pg-qSg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u2O-lv-pL8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="egG-5H-gle">
+                        <barButtonItem key="rightBarButtonItem" title="log into twitter" id="pHu-X8-IpJ">
+                            <connections>
+                                <action selector="logInSelected:" destination="BYZ-38-t0r" id="ety-zc-q7z"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1092" y="337"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tkG-QN-BAY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="g63-yh-Ga7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oOc-NT-jJr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="PLJ-IA-tEl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rH5-G9-fqE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="280" y="337"/>
+        </scene>
+    </scenes>
+</document>
